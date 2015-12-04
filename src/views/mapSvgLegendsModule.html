@@ -1,0 +1,41 @@
+{{? it.showSvgLegends || it.disableMasterPlanButton}}
+<div id="svgLegends">
+    <div  class="svg-legend" style="display:none;">
+       <div class="svg-header" data-type="legend-header">Legend<i class="icon-chevron-up"></i></div>
+            {{~ it.legendsArray :value:parentIndex}}
+            <div id="{{=value.id}}" class="svg-sub-item svg-sub-item-{{=parentIndex}}" style="display:none;" >
+                <ul>
+                    {{~ value.subLegends :subLegend:index }}
+                    <li ><span class="label {{=subLegend.cls || ''}}"></span><span>{{=subLegend.name}}</span></li>
+                    {{~}}
+                </ul>
+            </div>
+            {{~}}
+        </div>
+    </div>
+     
+    {{? it.disableMasterPlanButton && !it.tabular }}
+    <button  tooltip="Currently available for Noida, Bangalore and Pune" tooltip-placement="right">
+         Master Plan
+    </button>
+    {{?? !it.tabular}}
+    <button id="svgbtn" data-type="toggleSVgLegend" >
+         Master Plan
+     </button>
+    {{?}}
+    <div class="options">
+        {{? !it.tabular }}
+            {{~ it.legendsArray :value:index}}
+                <span class="{{=value.visible ? '' : 'hide'}} options-{{=index}}" data-type="optionClicked" data-index="{{=index}}">
+                	<i class="icon-train"></i>
+                </span>
+            {{~}}
+        {{??}}
+            {{~it.legendsArray : value:index}}
+                <span class="{{=value.visible ? '' : 'hide'}} options-{{=index}}" data-type="optionClicked" data-index="{{=index}}"><span class="arrow">{{=value.label}}</span></span>
+            {{~}}
+        {{?}}
+    </div>
+    <div class="clse" data-type="closeMasterPlan"><i class="icon-close"></i></div>
+</div>
+{{?}}

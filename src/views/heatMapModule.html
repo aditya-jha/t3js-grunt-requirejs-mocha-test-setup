@@ -1,0 +1,19 @@
+<div class="mod-content">
+    <button data-type="toggleHeatMap">Heat Maps</button>
+    {{? it.showHeatMapOptions }}
+        <div class="options">
+            {{~ it.heatMapTypes :value:index }}
+                <span id="{{=value.id}}" data-type="{{=value.name}}" class="heatmap-option" disabled="true">
+                <i class="icon-{{=value.icon || ''}}"></i></span>
+            {{~}}
+        </div>
+        <span class="clse" data-type="closeHeatMap"><i class="icon-close"></i></span>
+        <!--{{? it.showCityLevelOptions }}
+            <button id="heatMap_livability" data-type="livability" disabled="true">Livability</button>
+            <button id="heatMap_ppsqft" data-type="ppsqft" disabled="true">Price/sq.ft</button>
+            <button id="heatMap_projects" data-type="projects" disabled="true">No. Projects</button>
+        {{?}}-->
+    {{?}}
+</div>
+
+

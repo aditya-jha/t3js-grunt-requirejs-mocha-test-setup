@@ -1,0 +1,7 @@
+<div class="mod-content nearbyamenity-tabs">
+    {{~it.amenities :value:index}}
+        <span class="tabitem" data-type={{=value.name}} {{? value.count==0 }} disabled="true"{{?}}>
+            <span class="arrow">{{=value.displayName}} ({{=value.count}})</span>
+        </span>
+    {{~}}
+</div>

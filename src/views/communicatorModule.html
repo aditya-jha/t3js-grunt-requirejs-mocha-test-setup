@@ -1,0 +1,23 @@
+<ul class="mod-content neighboring-itemlist" id="communicator-list">
+    {{? it.type=='customDirection'}}
+        {{~it.results :value:index}}
+            <li data-type="{{=index}}" data-value="{{=value.placeId}}" data-target="customDirection" {{? value.source}}data-source="{{=value.source}}"{{?}}>
+                <span class="icon-wrap">
+                    <i class="icon-restaurant"></i>
+                </span>
+                <span class="desc">{{=value.description}}</span>
+                <span class="dist">{{=value.distance}}</span>
+            </li>
+        {{~}}
+    {{?? it.type=='nearByAmenity'}}
+        {{~it.results :value:index}}
+            <li data-type="{{=index}}" data-value="{{=value.id}}" data-target="nearByAmenity">
+                <span class="icon-wrap">
+                    <i class="icon-restaurant"></i>
+                </span>
+                <span class="desc">{{=value.name}}</span>
+                <span class="dist">{{=value.geoDistance}}</span>
+            </li>
+        {{~}}
+    {{?}}
+</ul>

@@ -1,0 +1,18 @@
+{{?it.showOption}}
+<div class="mod-content">
+    <div data-type="toggleDraw">
+        {{? !it.drawActiveFlag}}
+        <div class="draw">
+        	<span>Draw your region <i class="icon-edit"></i></span>
+		</div>
+        {{??}}
+        <div class="cancel">
+            <span>
+                {{=it.polygonExist ? 'Erase' : 'Cancel'}}
+                <i class="icon-close"></i>
+            </span>
+        </div>
+        {{?}}
+    </div>
+</div>
+{{?}}

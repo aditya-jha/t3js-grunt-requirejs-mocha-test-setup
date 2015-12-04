@@ -1,0 +1,7 @@
+<ul class="suggestions-list">
+{{~it.suggestions :value:index}}
+    <li data-type={{=value.place_id}} data-target="suggestion">
+    	{{=value.description}}
+    </li>
+{{~}}
+</ul>
