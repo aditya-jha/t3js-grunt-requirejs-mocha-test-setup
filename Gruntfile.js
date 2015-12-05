@@ -11,9 +11,12 @@ module.exports = function(grunt) {
             }
         },
         mocha_phantomjs: {
-            all: ['tests/*.html'],
-            options: {
-                debug:true
+            all: {
+                options: {
+                    urls: [
+                        'http://localhost:8000/tests/testRunner.html',
+                    ]
+                }
             }
         },
         connect: {

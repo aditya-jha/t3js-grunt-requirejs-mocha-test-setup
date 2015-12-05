@@ -1,7 +1,6 @@
 define([], function(){
-  Box.Application.addService('mapsConfig', function(application) {
-
-      'use strict';
+    "use strict";
+    Box.Application.addService('mapsConfig', function(application) {
 
       var mapsConfig = {};
 

@@ -2,6 +2,7 @@ define([
     'chai',
     'services/mapsConfig'
 ], function(chai) {
+    "use strict";
     var expect = chai.expect;
     describe('mapconfig service', function() {
         var service;

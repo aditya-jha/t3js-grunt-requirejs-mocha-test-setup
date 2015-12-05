@@ -1,0 +1,24 @@
+{
+  "name": "mapsModule",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Aditya Jha <aditya.jha@proptiger.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/devilcode/t3js-grunt-requirejs-mocha-test-setup",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

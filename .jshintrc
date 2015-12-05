@@ -1,0 +1,38 @@
+ {
+   "node": true,
+   "esnext": true,
+   "bitwise": true,
+   "camelcase": false,
+   "curly": true,
+   "eqeqeq": false,
+   "es3": false,
+   "freeze": true,
+   "immed": true,
+   "indent": 4,
+   "latedef": "nofunc",
+   "newcap": true,
+   "noarg": true,
+   "quotmark": false,
+   "regexp": true,
+   "undef": true,
+   "unused": true,
+   "strict": true,
+   "trailing": true,
+   "validthis": true,
+   "smarttabs": true,
+   "white": true,
+   "sub": true,
+   "laxcomma": true,
+   "globals": {
+       "logger": true,       // defined in main.js as global,
+       "showLoading": true,  // used in ajax load of page
+       "hideLoading": true,  // used in ajax load of page,
+       "showAjaxLoadingError": true,
+       "define":true,
+       "Box":true,
+       "$":true,
+       "require":true,
+       "doT":true
+   },
+   "predef": ["window", "document", "navigator", "JSON", "unescape"]
+}
